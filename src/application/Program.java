@@ -41,13 +41,13 @@ public class Program {
 
 				if (checkin.before(now) || checkout.before(now)) {
 					System.out.println("As datas precisam ser datas futuras");
+				} 
+				else if (!checkout.after(checkin)) {
+					System.out.println("A data de checkout deve ser posterior a data de checkin ");
 				}
-			 else if (!checkout.after(checkin)) {
-				System.out.println("A data de checkout deve ser posterior a data de checkin ");
-	}
 			}
-	
-		sc.close();
+
+			sc.close();
 		}
 	}
 }
